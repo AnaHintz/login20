@@ -1,12 +1,13 @@
 import {
-  Avatar,
+  Icon,
   Button,
   Card,
   Text,
   Modal, Portal, PaperProvider,} from "react-native-paper";
+  
 import * as React from "react";
 
-const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
+const LeftContent = (props) => <Icon {...props}  />;
 
 const Feed = () => {
   const [visible, setVisible] = React.useState(false);
@@ -27,14 +28,14 @@ const Feed = () => {
         </Modal>
       </Portal>
       <Card>
-        <Card.Title title="Card Title" left={LeftContent} />
+        <Card.Title left={LeftContent} />
         <Card.Content>
           <Text variant="titleLarge">Card title</Text>
-          <Text variant="bodyMedium">Card content</Text>
+          
         </Card.Content>
-        <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
+        <Card.Cover  />
         <Card.Actions>
-          <Button style={{ marginTop: 30 }} onPress={showModal}>
+          <Button style={{ marginTop: 30 }} onPress={showModal} mode="contained" buttonColor="hotpink">
             Ver mais
           </Button>
         </Card.Actions>
